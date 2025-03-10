@@ -5,4 +5,191 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity" />
+    android:orientation="vertical"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="57"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv1up"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv1down"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/et1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number" />
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2" />
+
+            <Button
+                android:id="@+id/btn1"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:text="Check" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7.5" />
+
+        <LinearLayout
+            android:id="@+id/ll2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv2up"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv2down"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/et2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number" />
+
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2" />
+
+            <Button
+                android:id="@+id/btn2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:text="Check" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="7.5" />
+
+        <LinearLayout
+            android:id="@+id/ll3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="25"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <TextView
+                android:id="@+id/tv3up"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <TextView
+                android:id="@+id/tv3down"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:gravity="center" />
+
+            <EditText
+                android:id="@+id/et3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:ems="10"
+                android:gravity="center"
+                android:inputType="number" />
+
+            <ImageView
+                android:id="@+id/iv3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2" />
+
+            <Button
+                android:id="@+id/btn3"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1.5"
+                android:text="Check" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="5" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="43"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20" />
+
+        <Button
+            android:id="@+id/btnNew"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="60"
+            android:text="New" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="20" />
+    </LinearLayout>
+</LinearLayout>
