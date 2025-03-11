@@ -147,4 +147,21 @@ public class MainActivity extends AppCompatActivity {
             tv3down.setText(tv3downSt);
         }
     }
+
+    public void check3(View view) {
+        if (stage3)
+        {
+            et3text = et3.getText().toString();
+            et3num = Integer.parseInt(et3text);
+            if (et3num == tv3upNum+tv3downNum)
+            {
+                iv3.setImageResource(R.drawable.v_photo);
+            }
+            else
+            {
+                iv3.setImageResource(R.drawable.x_photo);
+            }
+            stage3 = !stage3;
+        }
+    }
 }
