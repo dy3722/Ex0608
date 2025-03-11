@@ -41,6 +41,8 @@ public class MainActivity extends AppCompatActivity {
     String tv1downSt;
     String tv2upSt;
     String tv2downSt;
+    String tv3upSt;
+    String tv3downSt;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,13 +63,6 @@ public class MainActivity extends AppCompatActivity {
         tv1downSt = "" + tv1downNum;
         tv1down.setText(tv1downSt);
 
-        /*
-        et2text = et2.getText().toString();
-        et2num = Integer.parseInt(et2text);
-        et3text = et3.getText().toString();
-        et3num = Integer.parseInt(et3text);
-
-         */
     }
 
     private void hatunaLinearLayout() {
@@ -125,6 +120,31 @@ public class MainActivity extends AppCompatActivity {
             tv2downNum = rnd.nextInt(100-10)+10;
             tv2downSt = "" + tv2downNum;
             tv2down.setText(tv2downSt);
+        }
+    }
+
+    public void check2(View view) {
+        if (stage2)
+        {
+            et2text = et2.getText().toString();
+            et2num = Integer.parseInt(et2text);
+            if (et2num == tv2upNum+tv2downNum)
+            {
+                iv2.setImageResource(R.drawable.v_photo);
+            }
+            else
+            {
+                iv2.setImageResource(R.drawable.x_photo);
+            }
+            stage2 = !stage2;
+            stage3 = !stage3;
+            ll3.setVisibility(View.VISIBLE);
+            tv3upNum = tv2upNum+tv2downNum;
+            tv3upSt = "" + tv3upNum;
+            tv3up.setText(tv3upSt);
+            tv3downNum = rnd.nextInt(100-10)+10;
+            tv3downSt = "" + tv3downNum;
+            tv3down.setText(tv3downSt);
         }
     }
 }
