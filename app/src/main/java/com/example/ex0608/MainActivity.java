@@ -105,10 +105,12 @@ public class MainActivity extends AppCompatActivity {
             et1num = Integer.parseInt(et1text);
             if (et1num == tv1upNum+tv1downNum)
             {
+                iv1.setVisibility(View.VISIBLE);
                 iv1.setImageResource(R.drawable.v_photo);
             }
             else
             {
+                iv1.setVisibility(View.VISIBLE);
                 iv1.setImageResource(R.drawable.x_photo);
             }
             stage1 = !stage1;
@@ -130,10 +132,12 @@ public class MainActivity extends AppCompatActivity {
             et2num = Integer.parseInt(et2text);
             if (et2num == tv2upNum+tv2downNum)
             {
+                iv2.setVisibility(View.VISIBLE);
                 iv2.setImageResource(R.drawable.v_photo);
             }
             else
             {
+                iv2.setVisibility(View.VISIBLE);
                 iv2.setImageResource(R.drawable.x_photo);
             }
             stage2 = !stage2;
@@ -155,13 +159,35 @@ public class MainActivity extends AppCompatActivity {
             et3num = Integer.parseInt(et3text);
             if (et3num == tv3upNum+tv3downNum)
             {
+                iv3.setVisibility(View.VISIBLE);
                 iv3.setImageResource(R.drawable.v_photo);
             }
             else
             {
+                iv3.setVisibility(View.VISIBLE);
                 iv3.setImageResource(R.drawable.x_photo);
             }
             stage3 = !stage3;
         }
+    }
+
+    public void newGame(View view) {
+        tv1upNum = rnd.nextInt(100-10)+10;
+        tv1upSt = "" + tv1upNum;
+        tv1up.setText(tv1upSt);
+        tv1downNum = rnd.nextInt(100-10)+10;
+        tv1downSt = "" + tv1downNum;
+        tv1down.setText(tv1downSt);
+        et1.setText("");
+        et2.setText("");
+        et3.setText("");
+        iv1.setVisibility(View.INVISIBLE);
+        iv2.setVisibility(View.INVISIBLE);
+        iv3.setVisibility(View.INVISIBLE);
+        ll2.setVisibility(View.INVISIBLE);
+        ll3.setVisibility(View.INVISIBLE);
+        stage1 = true;
+        stage2 = false;
+        stage3 = false;
     }
 }
