@@ -99,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void check1(View view) {
-        if (stage1)
+        if (stage1 && !(et1.getText().toString().equals("")))
         {
             et1text = et1.getText().toString();
             et1num = Integer.parseInt(et1text);
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void check2(View view) {
-        if (stage2)
+        if (stage2 && !(et2.getText().toString().equals("")))
         {
             et2text = et2.getText().toString();
             et2num = Integer.parseInt(et2text);
@@ -153,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void check3(View view) {
-        if (stage3)
+        if (stage3 && !(et3.getText().toString().equals("")))
         {
             et3text = et3.getText().toString();
             et3num = Integer.parseInt(et3text);
@@ -178,9 +178,9 @@ public class MainActivity extends AppCompatActivity {
         tv1downNum = rnd.nextInt(100-10)+10;
         tv1downSt = "" + tv1downNum;
         tv1down.setText(tv1downSt);
-        et1.setText("");
-        et2.setText("");
-        et3.setText("");
+        et1.getText().clear();
+        et2.getText().clear();
+        et3.getText().clear();
         iv1.setVisibility(View.INVISIBLE);
         iv2.setVisibility(View.INVISIBLE);
         iv3.setVisibility(View.INVISIBLE);
