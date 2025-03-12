@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
     String tv2downSt;
     String tv3upSt;
     String tv3downSt;
+    int sum;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,6 +55,8 @@ public class MainActivity extends AppCompatActivity {
         hatunaImageView();
         hatunaButton();
         hatunaLinearLayout();
+
+        sum = 0;
 
         rnd = new Random();
         tv1upNum = rnd.nextInt(100-10)+10;
@@ -107,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 iv1.setVisibility(View.VISIBLE);
                 iv1.setImageResource(R.drawable.v_photo);
+                sum++;
             }
             else
             {
@@ -134,6 +138,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 iv2.setVisibility(View.VISIBLE);
                 iv2.setImageResource(R.drawable.v_photo);
+                sum++;
             }
             else
             {
@@ -162,6 +167,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 iv3.setVisibility(View.VISIBLE);
                 iv3.setImageResource(R.drawable.v_photo);
+                sum++;
             }
             else
             {
@@ -169,6 +175,23 @@ public class MainActivity extends AppCompatActivity {
                 iv3.setImageResource(R.drawable.x_photo);
             }
             stage3 = !stage3;
+
+            if (sum == 0)
+            {
+                btnNew.setText("0% , 0/3");
+            }
+            else if (sum == 1)
+            {
+                btnNew.setText("33.3% , 1/3");
+            }
+            else if (sum == 2)
+            {
+                btnNew.setText("66.6% , 2/3");
+            }
+            else
+            {
+                btnNew.setText("100% , 3/3");
+            }
         }
     }
 
@@ -190,5 +213,7 @@ public class MainActivity extends AppCompatActivity {
         stage1 = true;
         stage2 = false;
         stage3 = false;
+        btnNew.setText("New");
+        sum = 0;
     }
 }
