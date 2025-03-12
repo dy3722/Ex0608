@@ -149,6 +149,7 @@ public class MainActivity extends AppCompatActivity {
             tv3downNum = rnd.nextInt(100-10)+10;
             tv3downSt = "" + tv3downNum;
             tv3down.setText(tv3downSt);
+
         }
     }
 
